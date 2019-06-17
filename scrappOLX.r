@@ -22,3 +22,4 @@ elems <- remDr$findElements(using='class name', "detailsLink")
 wektorLinkowTemp <- unlist(lapply(elems,function(x){x$getElementAttribute("href")}))
 wektorLinkow<-c(wektorLinkow,wektorLinkowTemp)
 }
+wektorLinkow <- wketorLinkow%>%unique()
