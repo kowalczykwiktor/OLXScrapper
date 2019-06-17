@@ -28,3 +28,9 @@ library(stringr)
 library(stringi)
 #install.packages("stringr")
 #install.packages("stringi")
+remDr$close()
+n=length(wektorLinkow)
+for( pageIndex in 1 : n){
+  urlpage <- wektorLinkow[pageIndex]
+  if (is.na (stringr::str_extract(urlpage, 'olx'))){
+    print(wektorLinkow[pageIndex])
