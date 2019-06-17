@@ -23,3 +23,8 @@ wektorLinkowTemp <- unlist(lapply(elems,function(x){x$getElementAttribute("href"
 wektorLinkow<-c(wektorLinkow,wektorLinkowTemp)
 }
 wektorLinkow <- wketorLinkow%>%unique()
+
+library(stringr)
+library(stringi)
+#install.packages("stringr")
+#install.packages("stringi")
