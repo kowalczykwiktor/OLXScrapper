@@ -1,3 +1,6 @@
+getwd()
+setwd("./SynologyDrive/Repository/OLXScrapper")
+
 library(RSelenium)
 library(rvest)
 #install.packages("RSelenium")
