@@ -80,3 +80,15 @@ if (grepl("Liczba_pokoi",tbls_ls[[i]]$X1)){
 liczbaPokoi <- tbls_ls[[i]]$X2
 }
       }
+
+      dataplus<-data.frame(idogloszenia,place,ofertaOd,cenaZam,poziom, umeblowanie,rynek,rodzajZabudowy,powierzchnia,liczbaPokoi)
+      write.table( dataplus,
+                   fileEncoding = "UTF-8",
+                   file = "./mieszkaniaGr3.csv",
+                   append = T,
+                   sep =';',
+                   row.names=F,
+                   col.names=F )
+      
+  }
+} 
