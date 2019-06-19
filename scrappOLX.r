@@ -1,8 +1,7 @@
 getwd()
 setwd("./SynologyDrive/Repository/OLXScrapper")
 
-library(RSelenium)
-library(rvest)
+ 
 #install.packages("RSelenium")
 #install.packages("rvest")
 
@@ -25,7 +24,7 @@ elems <- remDr$findElements(using='class name', "detailsLink")
 wektorLinkowTemp <- unlist(lapply(elems,function(x){x$getElementAttribute("href")}))
 wektorLinkow<-c(wektorLinkow,wektorLinkowTemp)
 }
-wektorLinkow <- wketorLinkow%>%unique()
+wektorLinkow <- wektorLinkow%>%unique()
 
 library(stringr)
 library(stringi)
